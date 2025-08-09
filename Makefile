@@ -16,21 +16,21 @@ install:
 
 # Run the FastAPI development server
 run:
-	uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+	.venv/bin/uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
 # Run tests
 test:
-	PYTHONPATH=. pytest -v
+	PYTHONPATH=. .venv/bin/pytest -v
 
 # Run linter
 lint:
-	ruff check .
-	black --check .
+	.venv/bin/ruff check .
+	.venv/bin/black --check .
 
 # Format code
 fmt:
-	black .
-	ruff check --fix .
+	.venv/bin/black .
+	.venv/bin/ruff check --fix .
 
 # Clean up temporary files
 clean:

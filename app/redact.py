@@ -12,8 +12,14 @@ def redact_sensitive_data(text: str) -> str:
     Returns:
         Text with sensitive information redacted
     """
-    # TODO: Implement sensitive data redaction
+    # TODO: Implement proper PII redaction (emails, phone numbers, etc.)
+    # For now, just return the text as-is
     return text
+
+
+def redact(text: str) -> str:
+    """Alias for redact_sensitive_data for backward compatibility."""
+    return redact_sensitive_data(text)
 
 
 def anonymize_contract(contract_data: dict) -> dict:

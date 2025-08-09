@@ -61,16 +61,16 @@ curl -s http://localhost:8000/healthz
 # {"status": "ok"}
 ```
 
-**(Planned in Phase 2)** Scoring an account with sample data:
+### Score an account with sample data
 ```bash
 curl -s -X POST http://localhost:8000/score \
   -H "Content-Type: application/json" \
-  -d '{"account_id":"ACME_CORP"}'
+  -d '{"account_id":"ACME_CORP"}' | jq .
 ```
 
 ## 📅 Development Phases
 - **Phase 1 (✅)** Scaffold project, `/healthz` route, tests, tooling
-- **Phase 2** Implement `/score`, ingest sample data, return hardcoded but schema-valid JSON
+- **Phase 2 (✅)** Implement `/score`, ingest sample data, return hardcoded but schema-valid JSON
 - **Phase 3** Integrate LLM with strict JSON output + validation/repair pass
 - **Phase 4** Add persistence, caching, and metrics
 - **Phase 5** Lightweight evals + reporting
