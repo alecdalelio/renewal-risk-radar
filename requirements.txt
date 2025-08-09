@@ -1,0 +1,12 @@
+vclfastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+httpx
+sqlalchemy
+tenacity
+python-dotenv
+structlog
+pytest
+ruff
+black
